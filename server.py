@@ -1,6 +1,6 @@
 import socket
 import boto3
-from tableCRUD import EHR
+from tableCRUD import SynapseAI
 dynamodb = boto3.client('dynamodb', region_name='us-east-1')
 
 
@@ -42,7 +42,7 @@ def server_program():
             #convert string to dictionary
             data[1] = eval(data[1])
             try:
-                res = ehr.getitem(data[0], data[1])
+                res = sdb.getitem(data[0], data[1])
                 conn.send(str(res).encode())
             except Exception as e:
                 conn.send(f"Patient not found, something went wrong with the demo! Here's what: {e}".encode())
@@ -52,7 +52,7 @@ def server_program():
             data = conn.recv(1024).decode()
             data = data.split(',')
             try:
-                ehr.additem_Radiologist(int(data[0]), int(data[1]), data[2], data[3], data[4], int(data[5]), data[6], data[7], data[8])
+                sdb.additem_Radiologist(int(data[0]), int(data[1]), data[2], data[3], data[4], int(data[5]), data[6], data[7], data[8])
                 conn.send('Patient added'.encode())
             except Exception as e:
                 conn.send("Patient not added, something went wrong with the demo! Here's what: {e}".encode())
@@ -61,7 +61,7 @@ def server_program():
             conn.send('Enter the table name'.encode())
             data = conn.recv(1024).decode()
             try:
-                ehr.delete_table(data)
+                sdb.delete_table(data)
                 conn.send('Table deleted'.encode())
             except Exception as e:
                 conn.send("Table not found, something went wrong with the demo! Here's what: {e}".encode())
@@ -72,7 +72,7 @@ def server_program():
             data = conn.recv(1024).decode()
             try:
                 data = data.split(',')
-                ehr.create_table(str(data[0]), str(data[1]), str(data[2]), str(data[3]), str(data[4]))
+                sdb.create_table(str(data[0]), str(data[1]), str(data[2]), str(data[3]), str(data[4]))
                 conn.send('Table created'.encode())
             except Exception as e:
                 conn.send("Table not created, something went wrong with the demo! Here's what: {e}".encode())
@@ -81,7 +81,7 @@ def server_program():
 if __name__ == '__main__':
     try:
         dyn_res = boto3.resource('dynamodb')
-        ehr = EHR(dyn_res)
+        sdb = SynapseAI(dyn_res)
     except Exception as e:
         print(f"Something went wrong with the demo! Here's what: {e}")
     server_program()

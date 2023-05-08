@@ -1,0 +1,26 @@
+[
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':1, 'Email':'doctor1@email.com', 'Created_at':'2022-05-08', 'Phone':'123-456-7890', 'Fname':'John', 'Lname':'Doe', 'Patient_Reviews':4.5, 'Certification':'MD', 'Specialty':'Cardiology'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':2, 'Email':'doctor2@email.com', 'Created_at':'2022-05-09', 'Phone':'234-567-8901', 'Fname':'Jane', 'Lname':'Smith', 'Patient_Reviews':4.7, 'Certification':'DO', 'Specialty':'Family Medicine'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':3, 'Email':'doctor3@email.com', 'Created_at':'2022-05-10', 'Phone':'345-678-9012', 'Fname':'Michael', 'Lname':'Johnson', 'Patient_Reviews':4.2, 'Certification':'MD', 'Specialty':'Neurology'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':4, 'Email':'doctor4@email.com', 'Created_at':'2022-05-11', 'Phone':'456-789-0123', 'Fname':'Sarah', 'Lname':'Lee', 'Patient_Reviews':4.8, 'Certification':'MD', 'Specialty':'Dermatology'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':5, 'Email':'doctor5@email.com', 'Created_at':'2022-05-12', 'Phone':'567-890-1234', 'Fname':'David', 'Lname':'Kim', 'Patient_Reviews':4.1, 'Certification':'DO', 'Specialty':'Orthopedics'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':6, 'Email':'doctor6@email.com', 'Created_at':'2022-05-13', 'Phone':'678-901-2345', 'Fname':'Maria', 'Lname':'Garcia', 'Patient_Reviews':4.6, 'Certification':'MD', 'Specialty':'Pediatrics'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':7, 'Email':'doctor7@email.com', 'Created_at':'2022-05-14', 'Phone':'789-012-3456', 'Fname':'William', 'Lname':'Brown', 'Patient_Reviews':4.4, 'Certification':'DO', 'Specialty':'Internal Medicine'}"
+    },
+    {
+        "Statement": "INSERT INTO \"Doctors\" value {'Doctor_id':8, 'Email':'doctor8@email.com', 'Created_at':'2022-05-15', 'Phone':'890-123-4567', 'Fname':'Emily', 'Lname':'Wang', 'Patient_Reviews':4.9, 'Certification':'MD', 'Specialty':'Ophthalmology'}"
+    }
+]

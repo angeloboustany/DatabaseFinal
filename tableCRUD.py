@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 logger = logging.getLogger(__name__)
 
-class EHR:
+class SynapseAI:
     def __init__(self, dyn_resource):
 
         self.dyn_resource = dyn_resource
@@ -314,7 +314,7 @@ class EHR:
 if __name__ == '__main__':
     try:
         dyn_res = boto3.resource('dynamodb')
-        ehr = EHR(dyn_res)
+        ehr = SynapseAI(dyn_res)
         # ehr.create_table_EHR('EHR')
         #ehr.create_table_Radiologist('Radiologist')
         #ehr.create_table_Doctors('Doctors')
