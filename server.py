@@ -1,6 +1,7 @@
 import socket
 import boto3
 from tableCRUD import SynapseAI
+import tableQuery
 dynamodb = boto3.client('dynamodb', region_name='us-east-1')
 
 
@@ -76,6 +77,8 @@ def server_program():
                 conn.send('Table created'.encode())
             except Exception as e:
                 conn.send("Table not created, something went wrong with the demo! Here's what: {e}".encode())
+        else:
+            conn.send('Invalid command'.encode())
     conn.close()  # close the connection
 
 if __name__ == '__main__':
