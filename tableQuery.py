@@ -78,7 +78,7 @@ def create_execute_statement_input():
     #input = {"Statement": "SELECT * FROM \"SynapseAIDB\".\"Diagnosis\" WHERE PK = 'P#1' ORDER BY DiagnosisTime DESC"}
 
     #What is the total cost of medical procedures for a particular patient?
-    #input = {"Statement": "SELECT ProcedureCost FROM SynapseAIDB WHERE PK = 'C#1' AND SK = 'I#2023'"}
+    #input = {"Statement": "SELECT ProcedureCost FROM SynapseAIDB WHERE PK = 'C#1' AND SK = 'C#1'"}
 
     #How many patient have this diagnosis X
     #input = {"Statement": "SELECT * FROM SynapseAIDB WHERE Diagnosis = 'Patient Diagnosised with Chain Pain could be hear failure'"}
