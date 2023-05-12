@@ -22,6 +22,7 @@ ERROR_HELP_STRINGS = {
 def create_dynamodb_client(region="us-east-1"):
     return boto3.client("dynamodb", region_name=region)
 
+# Here are all the 20 queries that we implemented
 
 def create_execute_statement_input():
 
